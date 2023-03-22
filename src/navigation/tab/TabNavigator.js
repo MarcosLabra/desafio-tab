@@ -45,7 +45,7 @@ const TabNavigator = () => {
           name="PokemonTypes"
           component={TypesScreen}
           options={{
-            title: "Types",
+            title: "Pokemon Types",
             tabBarIcon: ({ color, size }) => (
               <MaterialCommunityIcons name="format-list-bulleted-type" size={size} color={color} />
             )
@@ -55,7 +55,7 @@ const TabNavigator = () => {
           name="SearchPokemon"
           component={SearchScreen}
           options={{
-            title: "Search",
+            title: "Search your Pokemon",
             tabBarIcon: ({ color, size }) => (
               <FontAwesome name="search" size={size} color={color} />
             )
