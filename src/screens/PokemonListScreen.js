@@ -1,13 +1,22 @@
-import { Button, StyleSheet, Text, View } from 'react-native'
+import { FlatList, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
 import COLORS from '../constants/Colors'
+import POKEMONS from '../data/pokemons'
+import PokemonCard from '../components/PokemonCard'
+
 
 const PokemonListScreen = ({ navigation }) => {
+
   return (
     <View style={styles.screen}>
-      <Text style={styles.text}>PokemonListScreen</Text>
-    </View>
+      <FlatList
+        numColumns={2}
+        data={POKEMONS}
+        renderItem={({ item }) => <PokemonCard pokemon={item} />}
+        keyExtractor={item => item.id}
+      />
+    </View >
   )
 }
 
